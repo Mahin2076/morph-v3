@@ -112,7 +112,7 @@ button,a{font:inherit}
 .pitch-result-number span:last-child{font-size:118px;margin-left:5px}
 .pitch-result-card h2{font-size:47px;line-height:1;margin:20px 0 30px;letter-spacing:-.05em}
 .pitch-result-bar{height:39px;border-radius:15px;background:var(--no);overflow:hidden}
-.pitch-result-bar i{display:block;width:68%;height:100%;background:var(--yes);transform-origin:left;animation:bar-in 1s cubic-bezier(.22,1,.36,1) .3s both}
+.pitch-result-bar i{display:block;width:79%;height:100%;background:var(--yes);transform-origin:left;animation:bar-in 1s cubic-bezier(.22,1,.36,1) .3s both}
 .pitch-result-labels{display:flex;justify-content:space-between;margin-top:13px;font-size:19px}.pitch-result-labels b:first-child{color:#209340}.pitch-result-labels b:last-child{color:#cb352c}
 .pitch-result-card p{font-size:22px;color:#4c5560;margin:29px 0 0}
 .pitch-result-caveat{position:absolute;left:88px;bottom:104px;max-width:570px;font-size:25px;font-weight:650;line-height:1.2;text-shadow:0 3px 18px #000c}

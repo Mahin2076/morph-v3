@@ -553,22 +553,24 @@ async function boot() {
 async function loadCity(city, { filters = state.filters, preserveOnError = false } = {}) {
   els.askExample.disabled = true;
   filters = normalizeFilters(filters);
-  resetEvidence();
-  state.rawResidents = [];
-  state.city = city;
-  // Committed local tiles supply dimensions and shoreline masks without a live source call.
-  const maskBase = `assets/${city.slug}_tiles.png`;
-  if (city.bbox) MAP.bbox = { ...city.bbox };
-  MAP.base = maskBase;
-  map.setSatellite(true);           // satellite imagery on (PR 3 had switched to flat local tiles)
-  map.setBase(maskBase);
+  // A filter replaces the current city's audience only after the new sample loads.
+  if (!preserveOnError) {
+    resetEvidence();
+    state.rawResidents = [];
+    state.city = city;
+    const maskBase = `assets/${city.slug}_tiles.png`;
+    if (city.bbox) MAP.bbox = { ...city.bbox };
+    MAP.base = maskBase;
+    map.setSatellite(true);
+    map.setBase(maskBase);
+    state.news = [];
+    state.mainBranch = null;
+    refreshFeedPanel();
+  }
   syncActiveTitle();
 
   setStatusLoading(`waking ${city.display}…`);
-  hide(els.newsBubble);            // clear the previous city's news while loading
-  state.news = [];
-  state.mainBranch = null;
-  refreshFeedPanel();              // the feed follows the city; branch arrives after boot
+  hide(els.newsBubble);
   show(els.boot); setBoot(0.06);
   try {
     const sim = await api.createSimulation({

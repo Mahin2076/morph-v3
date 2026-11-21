@@ -1,0 +1,36 @@
+app = "morph-api-2076"
+primary_region = "sjc"
+
+[build]
+  dockerfile = "Dockerfile"
+
+[env]
+  RUST_LOG = "info"
+  TILES_DB = "server_tiles/sf.db"
+  CACHE_DB = "/data/cache.db"
+  STATE_DB = "/data/state.db"
+  MODEL_MAX_INFLIGHT = "4"
+  MAX_CLUSTERS = "160"
+  GEMINI_MODEL = "gemini-3.5-flash-lite"
+
+[mounts]
+  source = "morph_data"
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "suspend"
+  auto_start_machines = true
+  min_machines_running = 1
+
+  [[http_service.checks]]
+    grace_period = "30s"
+    interval = "30s"
+    method = "GET"
+    timeout = "8s"
+    path = "/health"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "2gb"

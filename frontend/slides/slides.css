@@ -88,7 +88,7 @@ button,a{font:inherit}
 .pitch-ask h2{position:absolute;left:86px;top:210px;margin:0;font-size:105px;line-height:.99;letter-spacing:-.065em;text-shadow:0 7px 30px #000a}
 .pitch-question{position:absolute;right:70px;bottom:156px;width:820px;min-height:282px;padding:31px 40px 30px;border-radius:32px 32px 32px 8px;background:#f9fbffed;color:#080f1c;box-shadow:0 28px 75px #0007;backdrop-filter:blur(14px)}
 .pitch-question small{display:block;color:var(--accent);font-size:18px;letter-spacing:.13em;font-weight:800;margin-bottom:16px}
-.pitch-question strong{display:block;max-width:680px;font-size:43px;line-height:1.13;letter-spacing:-.035em}
+.pitch-question strong{display:block;max-width:740px;font-size:34px;line-height:1.18;letter-spacing:-.035em}
 .pitch-question-arrow{position:absolute;right:34px;bottom:25px;font-size:41px;color:var(--accent)}
 .pitch-bottomline{position:absolute;left:86px;bottom:127px;font-size:23px;font-weight:600;color:#e2ebf2;text-shadow:0 2px 15px #000b}
 .pitch-data-main{position:absolute;left:82px;top:195px;text-shadow:0 8px 42px #000b}
@@ -112,7 +112,7 @@ button,a{font:inherit}
 .pitch-result-number span:last-child{font-size:118px;margin-left:5px}
 .pitch-result-card h2{font-size:47px;line-height:1;margin:20px 0 30px;letter-spacing:-.05em}
 .pitch-result-bar{height:39px;border-radius:15px;background:var(--no);overflow:hidden}
-.pitch-result-bar i{display:block;width:79%;height:100%;background:var(--yes);transform-origin:left;animation:bar-in 1s cubic-bezier(.22,1,.36,1) .3s both}
+.pitch-result-bar i{display:block;width:54%;height:100%;background:var(--yes);transform-origin:left;animation:bar-in 1s cubic-bezier(.22,1,.36,1) .3s both}
 .pitch-result-labels{display:flex;justify-content:space-between;margin-top:13px;font-size:19px}.pitch-result-labels b:first-child{color:#209340}.pitch-result-labels b:last-child{color:#cb352c}
 .pitch-result-card p{font-size:22px;color:#4c5560;margin:29px 0 0}
 .pitch-result-caveat{position:absolute;left:88px;bottom:104px;max-width:570px;font-size:25px;font-weight:650;line-height:1.2;text-shadow:0 3px 18px #000c}
